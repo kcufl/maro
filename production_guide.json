@@ -1,41 +1,29 @@
 {
-  "video_specs": {
-    "duration": "3분 (180초)",
-    "resolution": "1920x1080 (Full HD)",
-    "frame_rate": "30fps",
-    "aspect_ratio": "16:9"
-  },
-  "audio_specs": {
-    "sample_rate": "44100 Hz",
-    "bitrate": "128 kbps",
-    "format": "MP3"
-  },
-  "timing_breakdown": {
-    "0:00-0:15": {
-      "content": "인트로",
-      "visual": "채널 로고 + '오늘의 위로' 타이틀 + 주제 소개",
-      "audio": "따뜻한 인사말 + BGM 시작"
+  "title": "maro 채널 영상 제작 가이드",
+  "steps": [
+    {
+      "step": 1,
+      "title": "TTS 나레이션 생성",
+      "command": "python -c \"from maro_channel.media.tts_openai import create_tts; create_tts(open('narration.txt', 'r', encoding='utf-8').read(), 'narration.mp3')\"",
+      "result": "narration.mp3 파일 생성"
     },
-    "0:15-2:25": {
-      "content": "본문 위로글",
-      "visual": "자연스러운 배경 + 자막 표시",
-      "audio": "차분한 내레이션 + 잔잔한 BGM"
+    {
+      "step": 2,
+      "title": "비디오 제작",
+      "command": "python -c \"from maro_channel.media.video_maker import make_healing_video; make_healing_video('video_info.json', 'narration.mp3', 'maro_video.mp4')\"",
+      "result": "maro_video.mp4 파일 생성"
     },
-    "2:25-3:00": {
-      "content": "아웃로",
-      "visual": "요약 메시지 + 구독 안내",
-      "audio": "마무리 멘트 + BGM 페이드아웃"
+    {
+      "step": 3,
+      "title": "썸네일 생성",
+      "command": "python -c \"from maro_channel.media.thumbnail_gen import generate_healing_thumbnail; generate_healing_thumbnail('오늘의 위로: 자존감을 높이는 방법', 'daily_comfort', 'thumbnail.jpg')\"",
+      "result": "thumbnail.jpg 파일 생성"
     }
-  },
-  "visual_style": {
-    "background": "따뜻한 노을빛 하늘, 평화로운 숲길",
-    "color_palette": "부드러운 파스텔 톤 (크림, 베이지, 연한 오렌지)",
-    "font": "둥근고딕 또는 산세리프 계열",
-    "animation": "미니멀한 페이드 인/아웃 효과"
-  },
-  "audio_style": {
-    "bgm": "잔잔한 피아노/스트링 중심",
-    "narration": "따뜻하고 차분한 톤",
-    "pacing": "문장 끝마다 1-2초 멈춤으로 여운 강조"
-  }
+  ],
+  "requirements": [
+    "OpenAI API 키 (TTS용)",
+    "MoviePy 라이브러리 (비디오 제작용)",
+    "Pillow 라이브러리 (썸네일용)",
+    "배경 이미지 파일"
+  ]
 }
