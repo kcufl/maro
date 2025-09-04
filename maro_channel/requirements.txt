@@ -1,0 +1,25 @@
+# maro 채널 필수 패키지
+# 핵심 기능
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# 비디오 제작
+moviepy>=1.0.3
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# 오디오 처리
+pydub>=0.25.1
+srt>=3.5.2
+
+# 유튜브 API
+google-api-python-client>=2.0.0
+google-auth-oauthlib>=1.0.0
+google-auth-httplib2>=0.1.0
+
+# 스케줄링
+schedule>=1.2.0
+
+# 유틸리티
+requests>=2.31.0
+tqdm>=4.65.0
