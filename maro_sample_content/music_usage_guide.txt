@@ -1,0 +1,37 @@
+
+🎵 maro 채널 음악 사용 가이드
+
+1. 로열티 프리 음악 다운로드 사이트:
+   - Pixabay: https://pixabay.com/music/
+   - Freesound: https://freesound.org/
+   - YouTube Audio Library: https://studio.youtube.com/channel/UC.../music
+   - Zapsplat: https://www.zapsplat.com/
+   - Mixkit: https://mixkit.co/free-stock-music/
+
+2. 추천 검색 키워드:
+   - "calm piano"
+   - "peaceful ambient"
+   - "healing music"
+   - "meditation music"
+   - "soft background"
+   - "relaxing instrumental"
+
+3. 음악 파일 사용 방법:
+   - MP3 또는 WAV 형식 사용
+   - 3분 이상 길이 권장
+   - 파일을 maro_sample_content/background_music/ 폴더에 저장
+   - 파일명: music_01.mp3, music_02.mp3 등으로 저장
+
+4. 음악과 TTS 합성:
+   - TTS 음성: 100% 볼륨
+   - 배경음악: 20-30% 볼륨
+   - 3분 길이에 맞춰 자동 조절
+
+5. 사용 예시:
+   python maro_channel/samples/use_custom_music.py
+   - 사용자 지정 음악 파일로 영상 생성
+
+6. 주의사항:
+   - 저작권이 있는 음악 사용 금지
+   - 로열티 프리 또는 CC 라이선스 음악만 사용
+   - 상업적 사용 가능한 음악 확인 필수
