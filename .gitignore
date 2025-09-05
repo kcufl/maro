@@ -49,3 +49,6 @@ Thumbs.db
 data/
 output/
 *.wav
+
+# FFmpeg binaries
+ffmpeg/
